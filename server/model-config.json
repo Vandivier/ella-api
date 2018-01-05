@@ -34,5 +34,13 @@
   "Role": {
     "dataSource": "db",
     "public": false
+  },
+  "content": {
+    "dataSource": "db",
+    "public": true
+  },
+  "ella-user": {
+    "dataSource": "db",
+    "public": true
   }
 }

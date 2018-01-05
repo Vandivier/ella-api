@@ -25,28 +25,22 @@ Ella has two subprojects:
     1. Angular Universal server entry point at /src/main.ts
     1. Angular Universal UI entry point at /src/client/app.module.ts
 
-### Other Stuff & Conventions
+### Other Stuff
 
-1. global webpack not recommended https://webpack.js.org/guides/installation/#global-installation
-
-DB stuff
-1. https://dev.mysql.com/downloads/windows/installer/5.7.html
-1. mysql-installer-web-community-5.7.20.0.msi
-1. localhost db server tcp/ip at port 3306, config type dev machine, root pass: password
-1. test user, DB admin, host %, pass: test
-1. run as windows service, name MYSQL57
-1. X Protocol / doc store disabled
-1. C:\Program Files (x86)\MySQL\MySQL Server 5.7
-
-Auth and Firebase
-1. https://www.youtube.com/watch?v=O_jxEC0hWcA
-1. https://github.com/diegohaz/rest
-
-orchestration, ORM, API generation
-1. https://www.slant.co/improve/topics/11235/~javascript-orms
-1. https://loopback.io/ (v4)
-1. https://github.com/odino/the-conductor
-
-swagger
-1. https://swagger.io/swagger-editor/
+1. conventions
+    1. global webpack not recommended https://webpack.js.org/guides/installation/#global-installation
+1. DB stuff
+    1. https://dev.mysql.com/downloads/windows/installer/5.7.html
+    1. mysql-installer-web-community-5.7.20.0.msi
+    1. localhost db server tcp/ip at port 3306, config type dev machine, root pass: password
+    1. test user, DB admin, host %, pass: test
+    1. run as windows service, name MYSQL57
+    1. X Protocol / doc store disabled
+    1. C:\Program Files (x86)\MySQL\MySQL Server 5.7
+1. orchestration, ORM, API generation
+    1. https://www.slant.co/improve/topics/11235/~javascript-orms
+    1. https://loopback.io/doc/en/lb3/Defining-data-sources.html
+    1. https://github.com/odino/the-conductor
+1. swagger
+    1. https://swagger.io/swagger-editor/
 
