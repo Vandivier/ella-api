@@ -29,6 +29,7 @@ Ella has two subprojects:
 
 1. conventions
     1. global webpack not recommended https://webpack.js.org/guides/installation/#global-installation
+    1. main user model is called ella-user because User is reserved by LoopBack itself
 1. DB stuff
     1. https://dev.mysql.com/downloads/windows/installer/5.7.html
     1. mysql-installer-web-community-5.7.20.0.msi
