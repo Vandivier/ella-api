@@ -35,10 +35,8 @@ async function setupDatabase() {
     try {
         //await isoUtils.fpWait(); // just to allow debugger to catch process; DO NOT CHECK IN UNCOMMENTED
         //debugger
-        logger.logInfo('connection:' + connection);
-        logger.logInfo('connection.isConnected:' + connection.isConnected);
+        //logger.logInfo('connection.isConnected:' + connection.isConnected);
     } catch (e) {
-        debugger
         logger.logError('initTypeOrm err', e);
     }
 }
