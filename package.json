@@ -3,8 +3,8 @@
   "version": "0.0.1",
   "license": "MIT",
   "scripts": {
-    "debug-express": "node --inspect ./src/bin/www",
-    "debug-brk-express": "node inspect ./src/bin/www --inspect-brk",
+    "debug-express": "node --inspect ./bin/www",
+    "debug-brk-express": "node inspect ./bin/www --inspect-brk",
     "e2e": "",
     "forever": "forever start ./bin/www",
     "lint": "",
