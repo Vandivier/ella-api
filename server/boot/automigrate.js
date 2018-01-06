@@ -8,18 +8,24 @@
  * ref: https://loopback.io/doc/en/lb2/Defining-boot-scripts.html#overview
  *
  * TODO: let or const, don't var, if possible
+ * TODO: promisify and utilize await
  * 
  **/
 
 const isoUtils = require('../../services/serviceIsomorphicUtilities');
 
 module.exports = async function (app) {
-    var oEllaDB = app.dataSources.EllaDB;
-    var Item = app.models.Item;
-    var EllaUser = app.models.EllaUser;
+    const oEllaDB = app.dataSources.EllaDB;
+    const Item = app.models.Item;
+    const EllaUser = app.models.EllaUser;
 
-    //await isoUtils.fpWait(); // for debugging
-    //debugger
+    const oEllaUserJohn = { // for testing/developing only. remove before production.
+        'password': '1234', // #amyschumerbelike
+        'role-name': 'developer', // TODO: autogenerate
+        'username': 'john'
+    }
+
+    EllaUser.create(oEllaUserJohn);
 
     // first autoupdate the `EllaUser` model to avoid foreign key constraint failure
     oEllaDB.autoupdate('EllaUser', function (err) {
