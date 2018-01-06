@@ -1,0 +1,39 @@
+{
+  "name": "EllaUser",
+  "base": "User",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "id": {
+      "type": "number",
+      "required": true
+    },
+    "username": {
+      "type": "string",
+      "required": true
+    },
+    "public-email": {
+      "type": "string"
+    },
+    "authored-items": {
+      "type": [
+        "object"
+      ]
+    },
+    "role-name": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "authored-items": {
+      "type": "hasMany",
+      "model": "Item"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

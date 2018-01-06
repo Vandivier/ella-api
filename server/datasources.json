@@ -2,5 +2,15 @@
   "db": {
     "name": "db",
     "connector": "memory"
+  },
+  "EllaDB": {
+    "host": "localhost",
+    "port": 3306,
+    "url": "mysql://test:test@localhost/test",
+    "database": "test",
+    "password": "test",
+    "name": "test",
+    "user": "test",
+    "connector": "mysql"
   }
 }

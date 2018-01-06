@@ -14,33 +14,33 @@
     ]
   },
   "User": {
-    "dataSource": "db"
+    "dataSource": "EllaDB"
   },
   "AccessToken": {
-    "dataSource": "db",
+    "dataSource": "EllaDB",
     "public": false
   },
   "ACL": {
-    "dataSource": "db",
+    "dataSource": "EllaDB",
     "public": false
   },
   "RoleMapping": {
-    "dataSource": "db",
+    "dataSource": "EllaDB",
     "public": false,
     "options": {
       "strictObjectIDCoercion": true
     }
   },
   "Role": {
-    "dataSource": "db",
+    "dataSource": "EllaDB",
     "public": false
   },
-  "content": {
-    "dataSource": "db",
+  "Item": {
+    "dataSource": "EllaDB",
     "public": true
   },
-  "ella-user": {
-    "dataSource": "db",
+  "EllaUser": {
+    "dataSource": "EllaDB",
     "public": true
   }
 }
