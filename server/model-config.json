@@ -17,11 +17,11 @@
     "dataSource": "EllaDB"
   },
   "AccessToken": {
-    "dataSource": "EllaDB",
+    "dataSource": "db",
     "public": false
   },
   "ACL": {
-    "dataSource": "EllaDB",
+    "dataSource": "db",
     "public": false
   },
   "RoleMapping": {

@@ -58,3 +58,4 @@ Ella has two subprojects:
     1. Seperate documentation repo which includes documentation for API and Framework side, in an extendable way so projects can include their own docs as well.
     2. CSV-to-object (array), then create many using https://stackoverflow.com/questions/45860853/how-to-insert-multiple-records-in-loopback
     3. Generate ERD and swagger file dynamically
+7. Remove authentication on a single endpoint: https://loopback.io/doc/en/lb2/Authentication-authorization-and-permissions.html#exposing-and-hiding-models-methods-and-endpoints

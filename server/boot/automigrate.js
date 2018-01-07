@@ -23,7 +23,7 @@ module.exports = async function (app) {
         'username': 'john'
     }
 
-    oEllaDB.automigrate(['User', 'Application', 'Role', 'ACL', 'RoleMapping', 'AccessToken'], function(){}); // ref: https://github.com/strongloop/loopback/issues/591
+    oEllaDB.automigrate(['User', 'Application', 'Role', 'AccessToken'], function(){}); // ref: https://github.com/strongloop/loopback/issues/591
 
     // first autoupdate the `EllaUser` model to avoid foreign key constraint failure
     oEllaDB.automigrate('EllaUser', function (err) {
