@@ -1,7 +1,7 @@
 'use strict';
 
-module.exports = function (Ellauser) {
-    Ellauser.observe('before save', function filterProperties(ctx, next) {
+module.exports = function (EllaUser) {
+    EllaUser.observe('before save', function filterProperties(ctx, next) {
         /**
          *  make email optional
          *  ref: https://stackoverflow.com/questions/36276212/create-new-user-on-strongloop-without-inputting-email

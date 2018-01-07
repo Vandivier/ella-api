@@ -12,8 +12,6 @@
  * 
  **/
 
-const isoUtils = require('../../services/serviceIsomorphicUtilities');
-
 module.exports = async function (app) {
     const oEllaDB = app.dataSources.EllaDB;
     const Item = app.models.Item;
@@ -26,6 +24,8 @@ module.exports = async function (app) {
     }
 
     EllaUser.create(oEllaUserJohn);
+    
+    oEllaDB.automigrate(['User', 'Application', 'Role', 'ACL', 'RoleMapping', 'AccessToken'], function(){}); // ref: https://github.com/strongloop/loopback/issues/591
 
     // first autoupdate the `EllaUser` model to avoid foreign key constraint failure
     oEllaDB.autoupdate('EllaUser', function (err) {
