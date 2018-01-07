@@ -23,18 +23,19 @@ module.exports = async function (app) {
         'username': 'john'
     }
 
-    EllaUser.create(oEllaUserJohn);
-    
     oEllaDB.automigrate(['User', 'Application', 'Role', 'ACL', 'RoleMapping', 'AccessToken'], function(){}); // ref: https://github.com/strongloop/loopback/issues/591
 
     // first autoupdate the `EllaUser` model to avoid foreign key constraint failure
-    oEllaDB.autoupdate('EllaUser', function (err) {
+    oEllaDB.automigrate('EllaUser', function (err) {
         if (err) throw err;
-        console.log('\nAutoupdated table `EllaUser`.');
 
-        oEllaDB.autoupdate('Item', function (err) {
+        EllaUser.create(oEllaUserJohn);
+
+        console.log('\nAutomigrated table `EllaUser`.');
+
+        oEllaDB.automigrate('Item', function (err) {
             if (err) throw err;
-            console.log('\nAutoupdated table `Item`.');
+            console.log('\nAutomigrated table `Item`.');
             // at this point the database table `Item` should have foreign key `userId` or `ellaUserId`
         });
     });
