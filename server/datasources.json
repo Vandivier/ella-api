@@ -9,8 +9,9 @@
     "url": "mysql://test:test@localhost/test",
     "database": "test",
     "password": "test",
-    "name": "test",
+    "name": "EllaDB",
     "user": "test",
+    "supportBigNumbers": true,
     "connector": "mysql"
   }
 }

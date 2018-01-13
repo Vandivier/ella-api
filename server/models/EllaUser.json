@@ -14,26 +14,46 @@
       "type": "string",
       "required": true
     },
-    "public-email": {
+    "password": {
+      "type": "string",
+      "required": true
+    },
+    "publicEmail": {
       "type": "string"
     },
-    "authored-items": {
+    "ownedItems": {
       "type": [
         "object"
       ]
     },
-    "role-name": {
+    "roleName": {
       "type": "string",
       "required": true
+    },
+    "realm": {
+      "type": "string"
+    },
+    "emailVerified": {
+      "type": "string"
+    },
+    "verificationToken": {
+      "type": "string"
     }
   },
   "validations": [],
   "relations": {
-    "authored-items": {
+    "ownedItems": {
       "type": "hasMany",
       "model": "Item"
     }
   },
-  "acls": [],
+  "acls": [
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "DENY"
+    }
+  ],
   "methods": {}
 }

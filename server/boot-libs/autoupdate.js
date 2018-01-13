@@ -11,6 +11,8 @@
  * 
  **/
 
-module.exports = function(app) {
+module.exports = async function(app) {
     // TODO: update version # and any table updates since last breaking release
+    console.log('autoupdate ran');
+    return Promise.resolve();
 };

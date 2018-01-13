@@ -14,14 +14,26 @@
     ]
   },
   "User": {
-    "dataSource": "EllaDB"
+    "dataSource": "EllaDB",
+    "public": false
   },
   "AccessToken": {
-    "dataSource": "db",
-    "public": false
+    "dataSource": "EllaDB",
+    "public": false,
+    "relations": {
+      "user": {
+        "type": "belongsTo",
+        "model": "EllaUser",
+        "foreignKey": "id"
+      }
+    }
   },
   "ACL": {
     "dataSource": "db",
+    "public": false
+  },
+  "Application": {
+    "dataSource": "EllaDB",
     "public": false
   },
   "RoleMapping": {
